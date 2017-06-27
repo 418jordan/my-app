@@ -1,0 +1,9 @@
+<h3>Top Tasks</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let task of tasks"  [routerLink]="['/detail', task.id]"  class="col-1-4">
+    <div class="module task">
+      <h4>{{task.name}}</h4>
+    </div>
+  </a>
+</div>
+<task-search></task-search>

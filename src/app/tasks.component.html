@@ -1,0 +1,22 @@
+<h2>My Tasks</h2>
+<div>
+  <label>Task name:</label> <input #taskName />
+  <button (click)="add(taskName.value); taskName.value=''">
+    Add
+  </button>
+</div>
+<ul class="tasks">
+  <li *ngFor="let task of tasks" (click)="onSelect(task)"
+      [class.selected]="task === selectedTask">
+    <span class="badge">{{task.id}}</span>
+    <span>{{task.name}}</span>
+    <button class="delete"
+      (click)="delete(task); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedTask">
+  <h2>
+    {{selectedTask.name | uppercase}} is my task
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
