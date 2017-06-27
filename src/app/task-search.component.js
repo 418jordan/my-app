@@ -13,9 +13,7 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var Observable_1 = require("rxjs/Observable");
 var Subject_1 = require("rxjs/Subject");
-// Observable class extensions
 require("rxjs/add/observable/of");
-// Observable operators
 require("rxjs/add/operator/catch");
 require("rxjs/add/operator/debounceTime");
 require("rxjs/add/operator/distinctUntilChanged");
@@ -39,7 +37,6 @@ var TaskSearchComponent = (function () {
             ? _this.taskSearchService.search(term)
             : Observable_1.Observable.of([]); })
             .catch(function (error) {
-            // TODO: add real error handling
             console.log(error);
             return Observable_1.Observable.of([]);
         });

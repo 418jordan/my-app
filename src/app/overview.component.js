@@ -11,25 +11,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var task_service_1 = require("./task.service");
-var DashboardComponent = (function () {
-    function DashboardComponent(taskService) {
+var OverviewComponent = (function () {
+    function OverviewComponent(taskService) {
         this.taskService = taskService;
         this.tasks = [];
     }
-    DashboardComponent.prototype.ngOnInit = function () {
+    OverviewComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.taskService.getTasks()
-            .then(function (tasks) { return _this.tasks = tasks.slice(1, 5); });
+            .then(function (tasks) { return _this.tasks = tasks.slice(1, 11); });
     };
-    return DashboardComponent;
+    return OverviewComponent;
 }());
-DashboardComponent = __decorate([
+OverviewComponent = __decorate([
     core_1.Component({
-        selector: 'my-dashboard',
-        templateUrl: './dashboard.component.html',
-        styleUrls: ['./dashboard.component.css']
+        selector: 'my-overview',
+        templateUrl: './overview.component.html',
+        styleUrls: ['./overview.component.css']
     }),
     __metadata("design:paramtypes", [task_service_1.TaskService])
-], DashboardComponent);
-exports.DashboardComponent = DashboardComponent;
-//# sourceMappingURL=dashboard.component.js.map
+], OverviewComponent);
+exports.OverviewComponent = OverviewComponent;
+//# sourceMappingURL=overview.component.js.map

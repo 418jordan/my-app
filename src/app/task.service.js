@@ -16,7 +16,7 @@ var TaskService = (function () {
     function TaskService(http) {
         this.http = http;
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        this.tasksUrl = 'api/tasks'; // URL to web api
+        this.tasksUrl = 'api/tasks';
     }
     TaskService.prototype.getTasks = function () {
         return this.http.get(this.tasksUrl)

@@ -5,7 +5,7 @@ import { Component }          from '@angular/core';
   template: `
     <h1>{{title}}</h1>
     <nav>
-      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/overview" routerLinkActive="active">Overview</a>
       <a routerLink="/tasks" routerLinkActive="active">Tasks</a>
     </nav>
     <router-outlet></router-outlet>
@@ -13,5 +13,5 @@ import { Component }          from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Tour of Tasks';
+  title = 'My Tasks';
 }

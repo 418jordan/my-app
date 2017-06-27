@@ -6,7 +6,7 @@ import { promise } from 'selenium-webdriver';
 const expectedH1 = 'Tour of Tasks';
 const expectedTitle = `Angular ${expectedH1}`;
 const targetTask = { id: 14, name: 'Celeritas' };
-const targetTaskDashboardIndex = 3;
+const targetTaskOverviewIndex = 3;
 const nameSuffix = 'X';
 const newTaskName = targetTask.name + nameSuffix;
 
@@ -53,9 +53,9 @@ describe('Tutorial part 6', () => {
     return {
       navElts: navElts,
 
-      myDashboardHref: navElts.get(0),
-      myDashboard: element(by.css('my-app my-dashboard')),
-      topTasks: element.all(by.css('my-app my-dashboard > div h4')),
+      myOverviewHref: navElts.get(0),
+      myOverview: element(by.css('my-app my-overview')),
+      topTasks: element.all(by.css('my-app my-overview > div h4')),
 
       myTasksHref: navElts.get(1),
       myTasks: element(by.css('my-app my-tasks')),
@@ -80,20 +80,20 @@ describe('Tutorial part 6', () => {
         expectHeading(1, expectedH1);
     });
 
-    const expectedViewNames = ['Dashboard', 'Tasks'];
+    const expectedViewNames = ['Overview', 'Tasks'];
     it(`has views ${expectedViewNames}`, () => {
       let viewNames = getPageElts().navElts.map((el: ElementFinder) => el.getText());
       expect(viewNames).toEqual(expectedViewNames);
     });
 
-    it('has dashboard as the active view', () => {
+    it('has overview as the active view', () => {
       let page = getPageElts();
-      expect(page.myDashboard.isPresent()).toBeTruthy();
+      expect(page.myOverview.isPresent()).toBeTruthy();
     });
 
   });
 
-  describe('Dashboard tests', () => {
+  describe('Overview tests', () => {
 
     beforeAll(() => browser.get(''));
 
@@ -102,27 +102,27 @@ describe('Tutorial part 6', () => {
       expect(page.topTasks.count()).toEqual(4);
     });
 
-    it(`selects and routes to ${targetTask.name} details`, dashboardSelectTargetTask);
+    it(`selects and routes to ${targetTask.name} details`, overviewSelectTargetTask);
 
     it(`updates task name (${newTaskName}) in details view`, updateTaskNameInDetailView);
 
-    it(`cancels and shows ${targetTask.name} in Dashboard`, () => {
+    it(`cancels and shows ${targetTask.name} in Overview`, () => {
       element(by.buttonText('Back')).click();
       browser.waitForAngular(); // seems necessary to gets tests to past for toh-pt6
 
-      let targetTaskElt = getPageElts().topTasks.get(targetTaskDashboardIndex);
+      let targetTaskElt = getPageElts().topTasks.get(targetTaskOverviewIndex);
       expect(targetTaskElt.getText()).toEqual(targetTask.name);
     });
 
-    it(`selects and routes to ${targetTask.name} details`, dashboardSelectTargetTask);
+    it(`selects and routes to ${targetTask.name} details`, overviewSelectTargetTask);
 
     it(`updates task name (${newTaskName}) in details view`, updateTaskNameInDetailView);
 
-    it(`saves and shows ${newTaskName} in Dashboard`, () => {
+    it(`saves and shows ${newTaskName} in Overview`, () => {
       element(by.buttonText('Save')).click();
       browser.waitForAngular(); // seems necessary to gets tests to past for toh-pt6
 
-      let targetTaskElt = getPageElts().topTasks.get(targetTaskDashboardIndex);
+      let targetTaskElt = getPageElts().topTasks.get(targetTaskOverviewIndex);
       expect(targetTaskElt.getText()).toEqual(newTaskName);
     });
 
@@ -238,8 +238,8 @@ describe('Tutorial part 6', () => {
     });
   });
 
-  function dashboardSelectTargetTask() {
-    let targetTaskElt = getPageElts().topTasks.get(targetTaskDashboardIndex);
+  function overviewSelectTargetTask() {
+    let targetTaskElt = getPageElts().topTasks.get(targetTaskOverviewIndex);
     expect(targetTaskElt.getText()).toEqual(targetTask.name);
     targetTaskElt.click();
     browser.waitForAngular(); // seems necessary to gets tests to past for toh-pt6

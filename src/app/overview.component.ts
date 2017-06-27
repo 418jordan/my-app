@@ -4,11 +4,11 @@ import { Task }        from './task';
 import { TaskService } from './task.service';
 
 @Component({
-  selector: 'my-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: [ './dashboard.component.css' ]
+  selector: 'my-overview',
+  templateUrl: './overview.component.html',
+  styleUrls: [ './overview.component.css' ]
 })
-export class DashboardComponent implements OnInit {
+export class OverviewComponent implements OnInit {
   tasks: Task[] = [];
 
   constructor(private taskService: TaskService) { }

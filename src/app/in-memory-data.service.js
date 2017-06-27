@@ -5,17 +5,17 @@ var InMemoryDataService = (function () {
     }
     InMemoryDataService.prototype.createDb = function () {
         var tasks = [
-            { id: 0, name: 'Zero' },
-            { id: 11, name: 'Mr. Nice' },
-            { id: 12, name: 'Narco' },
-            { id: 13, name: 'Bombasto' },
-            { id: 14, name: 'Celeritas' },
-            { id: 15, name: 'Magneta' },
-            { id: 16, name: 'RubberMan' },
-            { id: 17, name: 'Dynama' },
-            { id: 18, name: 'Dr IQ' },
-            { id: 19, name: 'Magma' },
-            { id: 20, name: 'Tornado' }
+            { id: 1, name: 'Take out trash' },
+            { id: 2, name: 'Do the dishes' },
+            { id: 3, name: 'Weed the garden' },
+            { id: 4, name: 'Get dinner ready' },
+            { id: 5, name: 'Sweep the floor' },
+            { id: 6, name: 'Do homework' },
+            { id: 7, name: 'Get the oil changed' },
+            { id: 8, name: 'Rotate the tires' },
+            { id: 9, name: 'Mow the lawn' },
+            { id: 10, name: 'Prune the trees' },
+            { id: 11, name: 'Help in-laws' }
         ];
         return { tasks: tasks };
     };
