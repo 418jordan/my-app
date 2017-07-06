@@ -1,17 +1,19 @@
 .search-result{
-  border-bottom: 1px solid gray;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
-  width:195px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  width:50%;
   height: 16px;
   padding: 5px;
   background-color: white;
   cursor: pointer;
+  margin: auto;
+  
 }
 
 .search-result:hover {
   color: #eee;
-  background-color: #607D8B;
+  background-color: black;
 }
 
 #search-box{

@@ -2,7 +2,7 @@ label {
   display: inline-block;
   width: 3em;
   margin: .5em 0;
-  color: #607D8B;
+  color: black;
   font-weight: bold;
 }
 input {
@@ -13,7 +13,7 @@ input {
 button {
   margin-top: 20px;
   font-family: Arial;
-  background-color: #eee;
+  background-color: black;
   border: none;
   padding: 5px 10px;
   border-radius: 4px;

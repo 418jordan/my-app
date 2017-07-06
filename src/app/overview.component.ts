@@ -15,6 +15,6 @@ export class OverviewComponent implements OnInit {
 
   ngOnInit(): void {
     this.taskService.getTasks()
-      .then(tasks => this.tasks = tasks.slice(1, 5));
+      .then(tasks => this.tasks = tasks.slice(1, 11));
   }
 }

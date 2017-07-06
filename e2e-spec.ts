@@ -3,10 +3,10 @@
 import { browser, element, by, ElementFinder, ElementArrayFinder } from 'protractor';
 import { promise } from 'selenium-webdriver';
 
-const expectedH1 = 'Tour of Tasks';
-const expectedTitle = `Angular ${expectedH1}`;
-const targetTask = { id: 14, name: 'Celeritas' };
-const targetTaskOverviewIndex = 3;
+const expectedH1 = 'COMMITTER';
+const expectedTitle = `wELCOME TO ${expectedH1}`;
+const targetTask = { id: 1, name: 'Take out trash' };
+const targetTaskOverviewIndex = 5;
 const nameSuffix = 'X';
 const newTaskName = targetTask.name + nameSuffix;
 
@@ -43,7 +43,7 @@ class Task {
   }
 }
 
-describe('Tutorial part 6', () => {
+describe('Committer', () => {
 
   beforeAll(() => browser.get(''));
 
@@ -164,7 +164,7 @@ describe('Tutorial part 6', () => {
 
     it(`shows ${newTaskName} in Tasks list`, () => {
       element(by.buttonText('Save')).click();
-      browser.waitForAngular(); // seems necessary to gets tests to past for toh-pt6
+      browser.waitForAngular(); // seems necessary
       let expectedTask = {id: targetTask.id, name: newTaskName};
       expect(Task.fromLi(getTaskLiEltById(targetTask.id))).toEqual(expectedTask);
     });
@@ -242,7 +242,7 @@ describe('Tutorial part 6', () => {
     let targetTaskElt = getPageElts().topTasks.get(targetTaskOverviewIndex);
     expect(targetTaskElt.getText()).toEqual(targetTask.name);
     targetTaskElt.click();
-    browser.waitForAngular(); // seems necessary to gets tests to past for toh-pt6
+    browser.waitForAngular(); // seems necessary 
 
     let page = getPageElts();
     expect(page.taskDetail.isPresent()).toBeTruthy('shows task detail');
