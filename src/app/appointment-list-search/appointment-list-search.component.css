@@ -1,0 +1,22 @@
+.search-result{
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  width:50%;
+  height: 16px;
+  padding: 5px;
+  background-color: white;
+  cursor: pointer;
+  margin: auto;
+  
+}
+
+.search-result:hover {
+  color: #eee;
+  background-color: black;
+}
+
+#search-box{
+  width: 200px;
+  height: 20px;
+}
