@@ -11,6 +11,7 @@ import { TasksComponent }      from './tasks.component';
 import { TaskDetailComponent }  from './task-detail.component';
 import { TaskService }          from './task.service';
 import { TaskSearchComponent }  from './task-search.component';
+import { AppointmentListComponent } from './appointment-list/appointment-list.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { TaskSearchComponent }  from './task-search.component';
     OverviewComponent,
     TaskDetailComponent,
     TasksComponent,
-    TaskSearchComponent
+    TaskSearchComponent,
+    AppointmentListComponent
   ],
   providers: [ TaskService ],
   bootstrap: [ AppComponent ]
