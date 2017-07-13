@@ -17,7 +17,8 @@ var InMemoryDataService = (function () {
             { id: 10, name: 'Prune the trees' },
             { id: 11, name: 'Help in-laws' }
         ];
-        return { tasks: tasks };
+        var goals = [];
+        return { tasks: tasks, goals: goals };
     };
     return InMemoryDataService;
 }());

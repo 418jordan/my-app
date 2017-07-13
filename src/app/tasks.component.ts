@@ -51,6 +51,6 @@ export class TasksComponent implements OnInit {
   }
 
   gotoDetail(): void {
-    this.router.navigate(['/detail', this.selectedTask.id]);
+    this.router.navigate(['tasks','detail', this.selectedTask.id]);
   }
 }

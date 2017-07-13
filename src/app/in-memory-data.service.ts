@@ -14,6 +14,10 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 10, name: 'Prune the trees' },
       { id: 11, name: 'Help in-laws' }
     ];
-    return {tasks};
+    const goals:any[] = [
+       { id: 1,  name: 'Make my professor laugh and give me an A' },
+    ];
+        
+    return { tasks: tasks, goals: goals };
   }
 }

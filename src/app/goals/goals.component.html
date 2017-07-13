@@ -1,0 +1,27 @@
+<br>
+
+<div>
+  <label>Goal name:</label> <input #goalName />
+  <br>
+  <br>
+  <button (click)="add(goalName.value); goalName.value=''">
+    Add
+  </button>
+</div>
+<div *ngIf="selectedGoal">
+  <br>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+<br>
+<ul class="goals">
+  <li *ngFor="let goal of goals" (click)="onSelect(goal)"
+      [class.selected]="goal === selectedGoal">
+    <span class="badge">{{goal.id}}</span>
+    <span>{{goal.name}}</span>
+    <button class="delete"
+      (click)="delete(goal); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedGoal">
+  <button (click)="gotoDetail()">View Details</button>
+</div>
