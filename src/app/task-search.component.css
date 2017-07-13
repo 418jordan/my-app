@@ -5,15 +5,15 @@
   width:50%;
   height: 16px;
   padding: 5px;
-  background-color: white;
+  background-color: black;
   cursor: pointer;
   margin: auto;
   
 }
 
 .search-result:hover {
-  color: #eee;
-  background-color: black;
+  color: black;
+  background-color: white;
 }
 
 #search-box{

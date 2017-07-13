@@ -1,3 +1,5 @@
+Much of this project comes directly from the Angular Heros tutorial for a School project 
+
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
