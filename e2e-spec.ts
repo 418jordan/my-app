@@ -4,7 +4,7 @@ import { browser, element, by, ElementFinder, ElementArrayFinder } from 'protrac
 import { promise } from 'selenium-webdriver';
 
 const expectedH1 = 'COMMITTER';
-const expectedTitle = `wELCOME TO ${expectedH1}`;
+const expectedTitle = `WELCOME TO ${expectedH1}`;
 const targetTask = { id: 1, name: 'Take out trash' };
 const targetTaskOverviewIndex = 5;
 const nameSuffix = 'X';

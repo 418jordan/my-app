@@ -2,12 +2,14 @@
 
 <div>
   <label>Task name:</label> <input #taskName />
+  <br>
+  <br>
   <button (click)="add(taskName.value); taskName.value=''">
     Add
   </button>
 </div>
-<br>
 <div *ngIf="selectedTask">
+  <br>
   <button (click)="gotoDetail()">View Details</button>
 </div>
 <br>

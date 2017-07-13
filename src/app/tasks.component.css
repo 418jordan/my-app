@@ -1,31 +1,32 @@
 .selected {
-  background-color: #CFD8DC !important;
+  background-color: #069993 !important;
   color: white;
 }
 .tasks {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-  width: 15em;
+  width: 17em;
 }
 .tasks li {
   cursor: pointer;
   position: relative;
   left: 0;
-  background-color: #EEE;
+  background-color: #1C9784;
   margin: .5em;
   padding: .3em 0;
   height: 1.6em;
   border-radius: 4px;
 }
 .tasks li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
+  color: white;
+  background-color: #004D73;
+  left: 1em;
 }
 .tasks li.selected:hover {
   background-color: #BBD8DC !important;
   color: white;
+  left: 1em;
 }
 .tasks .text {
   position: relative;
@@ -36,7 +37,7 @@
   font-size: small;
   color: white;
   padding: 0.8em 0.7em 0 0.7em;
-  background-color: #607D8B;
+  background-color: #033053;
   line-height: 1em;
   position: relative;
   left: -1px;
@@ -47,20 +48,21 @@
 }
 button {
   font-family: Arial;
-  background-color: #eee;
+  background-color: black;
   border: none;
   padding: 5px 10px;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   cursor: hand;
 }
 button:hover {
-  background-color: #cfd8dc;
+  background-color: grey;
+  color: white;
 }
 button.delete {
   float:right;
   margin-top: 2px;
   margin-right: .8em;
-  background-color: gray !important;
+  background-color:black !important;
   color:white;
 }
